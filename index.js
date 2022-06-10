@@ -287,7 +287,7 @@ app.use('/api/notes/',noteRouter)
 
 
 
-app.get('*',(req,res)=>{
+app.get('/',(req,res)=>{
 
   res.send({message:"wrong end point"})
   
