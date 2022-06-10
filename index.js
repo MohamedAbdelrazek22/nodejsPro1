@@ -273,10 +273,12 @@ router.post('/ptofile',auth,ptofile)
 
 const express = require('express')
 const { dbconnection } = require('./config/dbConn')
+var cors=require('cors')
 const app = express()
 require('dotenv').config()
 const port = process.env.PORT
 app.use(express.json())
+app.use(cors())
 const {userRouter,noteRouter}=require('./Router/allRouters')
 
 
